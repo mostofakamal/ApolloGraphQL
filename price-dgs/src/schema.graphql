@@ -1,0 +1,15 @@
+type Price @key(fields: "id") {
+  id: ID!
+  productId: ID!
+  price: Float
+}
+
+extend type Product @key(fields: "id") {
+  id: ID! @external
+  price: Float
+}
+
+type Query {
+  prices: [Price]
+  priceByProduct(productId: ID!): Price
+}

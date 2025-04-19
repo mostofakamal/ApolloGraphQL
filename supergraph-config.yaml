@@ -1,0 +1,9 @@
+subgraphs:
+  price-dgs:
+    routing_url: ${PRICE_DGS_URL}
+    schema:
+      file: ./price-dgs/src/schema.graphql
+  product-dgs:
+    routing_url: ${PRODUCT_DGS_URL}
+    schema:
+      file: ./product-dgs/src/schema.graphql

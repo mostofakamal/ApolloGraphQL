@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "dotenv-cli": "^8.0.0",
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "compose-supergraph": "node preprocess-config.js && rover supergraph compose --config ./supergraph-config-expanded.yaml > ./supergraph-gateway/supergraph.graphql && del supergraph-config-expanded.yaml"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}

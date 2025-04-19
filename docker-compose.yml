@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  price-dgs:
+    build: ./price-dgs
+    ports:
+      - '4001:4001'
+
+  product-dgs:
+    build: ./product-dgs
+    ports:
+      - '4002:4002'
+
+  supergraph-gateway:
+    build: ./supergraph-gateway
+    ports:
+      - '4000:4000'
+    depends_on:
+      - price-dgs
+      - product-dgs
