@@ -4,7 +4,6 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "npx tsc && copy src\\schema.graphql dist\\schema.graphql",
     "clean": "rimraf dist",
     "dev": "nodemon --exec ts-node src/index.ts"
   },
