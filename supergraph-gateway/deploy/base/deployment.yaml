@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: supergraph-gateway
-          image: supergraph-gateway:latest
-          imagepullPolicy: Never
+          image: ghcr.io/mostofakamal/apollographql/supergraph-gateway:latest
           ports:
             - containerPort: 4000
           env:
