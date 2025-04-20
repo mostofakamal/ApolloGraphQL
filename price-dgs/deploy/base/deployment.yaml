@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: price-dgs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: price-dgs
+  template:
+    metadata:
+      labels:
+        app: price-dgs
+    spec:
+      containers:
+        - name: price-dgs
+          image: price-dgs:latest
+          ports:
+            - containerPort: 4001
+          env:
+            - name: PORT
+              value: "4001"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: price-dgs
+spec:
+  type: LoadBalancer
+  selector:
+    app: price-dgs
+  ports:
+    - protocol: TCP
+      port: 4001
+      targetPort: 4001
