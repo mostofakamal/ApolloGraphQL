@@ -15,6 +15,7 @@ spec:
       containers:
         - name: price-dgs
           image: price-dgs:latest
+          imagepullPolicy: Never
           ports:
             - containerPort: 4001
           env:

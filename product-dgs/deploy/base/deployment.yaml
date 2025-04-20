@@ -15,6 +15,7 @@ spec:
       containers:
         - name: product-dgs
           image: product-dgs:latest
+          imagepullPolicy: Never
           ports:
             - containerPort: 4002
           env:

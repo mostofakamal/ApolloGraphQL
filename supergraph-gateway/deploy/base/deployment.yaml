@@ -15,6 +15,7 @@ spec:
       containers:
         - name: supergraph-gateway
           image: supergraph-gateway:latest
+          imagepullPolicy: Never
           ports:
             - containerPort: 4000
           env:
