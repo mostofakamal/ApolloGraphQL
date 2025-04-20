@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: price-dgs
-          image: price-dgs:latest
-          imagepullPolicy: Never
+          image: ghcr.io/mostofakamal/apollographql/price-dgs:latest
           ports:
             - containerPort: 4001
           env:
