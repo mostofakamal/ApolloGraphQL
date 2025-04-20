@@ -12,6 +12,8 @@ spec:
       labels:
         app: price-dgs
     spec:
+      imagePullSecrets:
+        - name: ghcr-secret
       containers:
         - name: price-dgs
           image: ghcr.io/mostofakamal/apollographql/price-dgs:latest
