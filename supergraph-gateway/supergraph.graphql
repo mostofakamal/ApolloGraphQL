@@ -56,6 +56,7 @@ type Product
   price: Float @join__field(graph: PRICE_DGS)
   name: String! @join__field(graph: PRODUCT_DGS)
   description: String! @join__field(graph: PRODUCT_DGS)
+  launchDate: String! @join__field(graph: PRODUCT_DGS)
 }
 
 type Query
