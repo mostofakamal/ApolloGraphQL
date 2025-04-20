@@ -22,8 +22,8 @@ directive @link(url: String, as: String, for: link__Purpose, import: [link__Impo
 scalar join__FieldSet
 
 enum join__Graph {
-  PRICE_DGS @join__graph(name: "price-dgs", url: "http://price-dgs:4001")
-  PRODUCT_DGS @join__graph(name: "product-dgs", url: "http://product-dgs:4002")
+  PRICE_DGS @join__graph(name: "price-dgs", url: "http://price-dgs")
+  PRODUCT_DGS @join__graph(name: "product-dgs", url: "http://product-dgs")
 }
 
 scalar link__Import
