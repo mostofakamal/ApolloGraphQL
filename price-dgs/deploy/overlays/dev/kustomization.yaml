@@ -5,3 +5,6 @@ bases:
 - ../../base
 
 namespace: dev
+
+patchesStrategicMerge:
+  - replicas.yaml
