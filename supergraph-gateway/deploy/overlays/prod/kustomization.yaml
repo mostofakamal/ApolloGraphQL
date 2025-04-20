@@ -6,8 +6,5 @@ bases:
 
 namespace: prod
 
-resources:
-  - ../../base
-
 patchesStrategicMerge:
   - replicas.yaml
